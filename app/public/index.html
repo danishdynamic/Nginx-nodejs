@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NGINX Load Balancer Test</title>
+</head>
+<body>
+<h1>Express + NGINX Test</h1>
+<button onclick="callApi()">Call Backend</button>
+<p id="response"></p>
+
+<script>
+    function callApi() {
+    fetch('/api')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('response').innerText = data;
+        });
+    }
+</script>
+</body>
+</html>
